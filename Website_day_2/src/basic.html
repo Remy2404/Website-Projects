@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+    <style>
+        /* Responsive navigation bar styles */
+        nav {
+            background-color: #333;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Responsive layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            nav {
+                display: block;
+            }
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="basic.html">HTML Basics</a>
+        <a href="../components/list.html">List</a>
+        <a href="../components/table.html">Table</a>
+        <a href="../components/media.html">Pictures, Audio, Video</a>
+        <a href="link_iframe.html">Link & iFrame</a>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="container">
+        <h1>HTML Basic</h1>
+        <p>In this section, we cover basic tags and the anatomy of an HTML document.</p>
+
+        <h2>Basic Tags</h2>
+        <ul>
+            <li><strong>&lt;html&gt;</strong>: Root element of an HTML document.</li>
+            <li><strong>&lt;head&gt;</strong>: Contains meta information about the document.</li>
+            <li><strong>&lt;body&gt;</strong>: Contains the content of the page.</li>
+        </ul>
+
+        <h2>Attributes and Entities</h2>
+        <p>Attributes provide additional information about an element, while entities are used to display reserved characters or symbols.</p>
+    </div>
+
+</body>
+</html>
+

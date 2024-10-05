@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links & iFrame</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.5rem;
+            }
+
+            iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Links & iFrame</h1>
+
+        <h2>Hyperlinks</h2>
+    
+        <p style=" font-size: larger; display: flex; justify-items: center; justify-content:center;">
+            <a href="https://https://gemini-ai-930l.onrender.com/" target="_blank">gemini-ai</a>
+        </p>
+
+        <h2>iFrame Example</h2>
+        <p>
+            An iframe allows you to embed another webpage within your HTML document. Below is an example of an iframe embedding the Example.com website:
+        </p>
+
+        <iframe src="https://www.example.com" title="Example Website"></iframe>
+    </div>
+
+</body>
+</html>
