@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form and Validation in HTML5</title>
+</head>
+<body>
+<!--HTML5 introduced several new form input types and attributes that make form creation and validation easier without
+relying on JavaScript or external libraries.-->
+
+<form action="/submit" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required minlength="3" maxlength="15" pattern="[A-Za-z0-9]+">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

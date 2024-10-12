@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Student Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #name {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Random Student Name Generator</h1>
+<button onclick="generateRandomName()">Generate Random Name</button>
+<div id="name"></div>
+
+<script>
+    const students = [
+        "Phearom Ratha",
+        "Hor Kanhchakna",
+        "Phan Chanvorleak",
+        "Phon Ramy",
+        "Hok Soklay",
+        "Phon Lengthang",
+        "Puth Darasokchea",
+        "Phorn Sophana",
+        "Bunroeun Sereysarakroetth",
+        "Neang Sreynet",
+        "Hot Sothearith",
+        "Phay Sothiya",
+        "Thea Thaksin",
+        "Mut Brus",
+        "Men Sreytin",
+        "Yem Davit",
+        "Ya Aliza",
+        "Met Sreynoy",
+        "Loem Theankou",
+        "Vat Vannaden",
+        "Sean Soulong",
+        "Sun Kimsrun",
+        "Sok Sochetra",
+        "Ra Panha",
+        "Siek Sophannai",
+        "Has Bunroeun",
+        "Eksaran Phaoserylaksmi",
+        "Ouk Sovannrith",
+        "Roeun Shongkhoung",
+        "Lao Rana",
+        "Poeun Sreytey",
+        "Yim Sokunthearoth",
+        "Houn Sokha",
+        "To Sethoeurt",
+        "Mien Dane",
+        "Phorn Panhaudom",
+        "Bun Sovann",
+        "THI Lihor",
+        "Men Sreytin",
+        "Nim Pengly",
+        "Pring Vannaksombath",
+        "Chun Rosa",
+        "Nap Kimleang",
+        "Hok Souchean",
+        "Oeurn Soknai",
+        "Seang Ratha"
+    ];
+
+    function generateRandomName() {
+        const randomIndex = Math.floor(Math.random() * students.length);
+        document.getElementById('name').innerText = students[randomIndex];
+    }
+</script>
+
+</body>
+</html>

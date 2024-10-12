@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation in HTML5</title>
+</head>
+<body>
+<!--HTML5 handles form validation natively using input attributes. The browser provides immediate feedback if the
+validation fails, often with default messages.-->
+<form>
+    <label for="phone">Phone Number (format: 123-456-7890):</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
