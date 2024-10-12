@@ -87,7 +87,7 @@ To view the examples and practice HTML:
 3. Explore the content and try modifying the code to reinforce learning.
 
 ```bash
-git clone https://github.com/your-username/intro-to-html-I.git
+git clone https://github.com/Remy2404/Website-Projects.git
 ```
 
 ---
