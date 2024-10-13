@@ -53,15 +53,6 @@ Objective: Explore and implement advanced HTML5 features.
   - Local storage to save user preferences
   - Geolocation to display user's current location (with permission)
 
-## Submission Guidelines
-
-1. Create a separate folder for each task within this directory
-2. Name your files descriptively (e.g., task1_simple_webpage.html)
-3. Include any necessary CSS in a separate file
-4. For JavaScript functionality, use external .js files
-5. Ensure all code is well-commented and follows best practices
-6. Test your pages in multiple browsers before submission
-
 ## Resources
 
 - [MDN Web Docs - HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
