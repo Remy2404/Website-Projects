@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Media Controls</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .media-container {
+            margin-bottom: 30px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        video, audio {
+            width: 100%;
+            max-width: 600px;
+        }
+        .custom-controls {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="range"] {
+            width: 100px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Media Controls</h1>
+
+    <div class="media-container">
+        <h2>Video</h2>
+        <iframe id="youtubeVideo" width="764" height="430" src="https://www.youtube.com/embed/M1mnXktLBuI?enablejsapi=1" title="Nick IT {Cover} - ផ្អែក (พิง) | [Lyrics Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="custom-controls">
+            <button id="playPauseBtn" disabled>Play/Pause</button>
+            <input type="range" id="videoVolume" min="0" max="1" step="0.1" value="1" disabled>
+        </div>
+    </div>
+
+    <div class="media-container">
+        <h2>Audio</h2>
+        <audio id="myAudio" controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+        <div class="custom-controls">
+            <button onclick="playPauseAudio()">Play/Pause</button>
+            <input type="range" id="audioVolume" min="0" max="1" step="0.1" value="1" onchange="changeAudioVolume()">
+        </div>
+    </div>
+
+    <!-- Load YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        let player;
+        let playerReady = false;
+
+        // This function is called when the IFrame API is ready
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubeVideo', {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onError': onPlayerError
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            playerReady = true;
+            console.log("YouTube player is ready");
+            document.getElementById('playPauseBtn').disabled = false; // Enable Play/Pause button
+            document.getElementById('videoVolume').disabled = false;  // Enable volume control
+        }
+
+        function onPlayerError(event) {
+            console.error("YouTube Player Error:", event.data);
+        }
+
+        function playPauseVideo() {
+            if (!playerReady) {
+                console.error("YouTube player is not ready yet");
+                return;
+            }
+            const state = player.getPlayerState();
+            if (state === YT.PlayerState.PLAYING) {
+                player.pauseVideo();
+            } else {
+                player.playVideo();
+            }
+        }
+
+        function changeVideoVolume() {
+            if (!playerReady) {
+                console.error("YouTube player is not ready yet");
+                return;
+            }
+            const volume = document.getElementById('videoVolume').value * 100;
+            player.setVolume(volume);
+            console.log("Volume changed to:", volume);
+        }
+
+        // Audio controls
+        const audio = document.getElementById('myAudio');
+
+        function playPauseAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function changeAudioVolume() {
+            audio.volume = document.getElementById('audioVolume').value;
+        }
+
+        // Attach events to buttons only when the player is ready
+        document.getElementById('playPauseBtn').addEventListener('click', playPauseVideo);
+        document.getElementById('videoVolume').addEventListener('input', changeVideoVolume);
+    </script>
+</body>
+</html>
