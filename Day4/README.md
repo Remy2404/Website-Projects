@@ -51,6 +51,3 @@ On Day 4, we'll dive deeper into HTML and introduce the basics of CSS. This sess
 - [MDN Web Docs - HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [MDN Web Docs - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [CSS-Tricks](https://css-tricks.com/)
-
-## Next Steps
-After completing Day 4, you'll have a solid foundation in both HTML and CSS. The next session will focus on more advanced CSS techniques and introduce JavaScript basics.
