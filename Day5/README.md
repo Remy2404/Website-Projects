@@ -1,3 +1,6 @@
+![CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png)
+
+
 **Day5: CSS Basics**
 
 Welcome to the CSS Basics section of the HTML Basics project! In this folder, you'll find tasks and examples related to CSS, the language used to style HTML elements.
