@@ -1,0 +1,70 @@
+### Task 12: Flexbox
+
+#### Flexbox Layout Model
+
+The **Flexbox** layout model simplifies the process of creating layouts that automatically adjust to different screen sizes and content lengths. It allows elements to grow, shrink, and align within their container.
+
+Key Flexbox properties:
+- `display: flex;`: Defines a flex container, enabling Flexbox layout for its children.
+- `flex-direction`: Defines the direction of flex items (row, column).
+- `justify-content`: Aligns items horizontally within the flex container.
+- `align-items`: Aligns items vertically within the flex container.
+
+#### Example Flexbox Layout (Responsive Design)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        /* Flexbox container */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background-color: #ddd;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+</body>
+</html>
+```
+
+#### Explanation of Flexbox Properties:
+- **`flex-direction: row`**: Flex items are arranged horizontally.
+- **`justify-content: space-between`**: The flex items are spaced evenly along the horizontal axis.
+- **`align-items: center`**: The flex items are vertically centered within the flex container.
+- **Responsive Layout**: The media query changes the layout to a vertical column on smaller screens.
+
+Flexbox allows for a much simpler and more adaptable layout system compared to using float-based layouts or other older methods.
+
+---

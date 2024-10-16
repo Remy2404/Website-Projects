@@ -1,0 +1,38 @@
+## Task 8: Theme
+
+### Answer:
+
+Theming in CSS refers to creating different visual styles or appearances for a website or application. It allows developers to provide users with options to customize the look and feel of the interface according to their preferences.
+
+### Example Theme Switcher Using Sass:
+
+
+// Define variables for light and dark theme colors
+$light-theme-background-color: #ffffff;
+$dark-theme-background-color: #333333;
+
+// Styles for the light theme
+body.light-theme {
+    background-color: $light-theme-background-color;
+    color: black;
+}
+
+// Styles for the dark theme
+body.dark-theme {
+    background-color: $dark-theme-background-color;
+    color: white;
+}
+
+
+### JavaScript for Theme Switching:
+
+You can use JavaScript to toggle between themes by adding or removing classes from the body element:
+
+
+const toggleTheme = () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+};
+
+
+This JavaScript code defines a function `toggleTheme` that toggles the `dark-theme` and `light-theme` classes on the body element. You can trigger this function using a button or any other UI element to allow users to switch between themes.

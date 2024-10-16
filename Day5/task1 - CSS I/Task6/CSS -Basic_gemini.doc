@@ -1,0 +1,45 @@
+### Task 6: Text and Font Styling
+
+**Styling Text with CSS**
+
+### Sample HTML Document Showcasing Text Styling
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Font Styling Example</title>
+    <style>
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: normal;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This is a Styled Heading</h1>
+    <p>This paragraph features styled fonts and alignment, utilizing the 'Times New Roman' font.</p>
+    <a href="#">This link has styled text</a>
+
+</body>
+</html>
+```
+
+---

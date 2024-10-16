@@ -1,0 +1,67 @@
+## Task 6: Components
+
+### Answer:
+Components in CSS are reusable blocks of code that encapsulate styles for specific UI elements (like buttons or cards). They enhance reusability by allowing developers to maintain consistent styling across different parts of an application.
+
+### Example Card Component Using Sass:
+```scss
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    .card-header {
+        background-color: #f7f7f7;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 10px;
+
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darkblue;
+            }
+        }
+    }
+}
+```
+
+### Compiled CSS Output:
+```css
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .card-body {
+    padding: 10px;
+}
+
+.card .card-body .btn {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.card .card-body .btn:hover {
+    background-color: darkblue;
+}
+```
+Components allow for organized styles that enhance maintainability.
+
+---

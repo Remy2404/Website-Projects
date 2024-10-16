@@ -1,0 +1,45 @@
+## Task 4: Variables, Functions, and Inheritance
+
+### Answer:
+
+**Variables:**
+
+In Sass, variables are defined using the `$` symbol followed by the variable name. They can store values like colors, font sizes, or any other CSS value.
+
+**Functions:**
+
+Sass provides built-in functions for manipulating values, such as colors, strings, and numbers. You can also define your own custom functions.
+
+### Example of Variables and Functions:
+
+
+// Define a variable for the base font size
+$base-font-size: 16px;
+
+// Define a mixin that takes a font size as an argument
+@mixin text-style($size) {
+    font-size: $size;
+}
+
+h1 {
+    // Use the mixin with a calculated font size
+    @include text-style(2 * $base-font-size);
+}
+
+
+**Inheritance:**
+
+Sass allows you to inherit styles from one selector to another using the `@extend` directive. This helps reduce code duplication and maintain consistency.
+
+### Example:
+
+
+.error {
+    color: red;
+}
+
+.alert {
+    // Inherit styles from the .error class
+    @extend .error;
+    font-weight: bold;
+}

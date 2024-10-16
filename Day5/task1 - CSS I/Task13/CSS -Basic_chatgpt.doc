@@ -1,0 +1,61 @@
+### Task 13: Variables
+
+#### CSS Variables (Custom Properties)
+
+CSS variables, also called **custom properties**, allow developers to store values that can be reused throughout the stylesheet. This helps maintain consistency and makes it easier to update the styles across a website.
+
+#### Defining and Using CSS Variables:
+- Variables are defined using the `--` prefix and assigned a value.
+- The `var()` function is used to reference the variable.
+
+#### Example of CSS Variables
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        /* Defining CSS variables */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --font-size: 16px;
+        }
+
+        body {
+            font-size: var(--font-size);
+            color: var(--primary-color);
+        }
+
+        h1 {
+            color: var(--secondary-color);
+        }
+
+        /* Changing variable values for specific elements */
+        .highlight {
+            --primary-color: #e74c3c;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using CSS Variables</h1>
+    <p>This paragraph uses the primary color variable.</p>
+    <p class="highlight">This paragraph uses a modified primary color variable.</p>
+
+</body>
+</html>
+```
+
+#### Explanation:
+- **`:root`**: The `:root` pseudo-class represents the document's root element (usually the `<html>` tag). CSS variables defined here can be accessed globally.
+- **Using `var()`**: The `var()` function references the custom properties defined in `:root` or other elements.
+- **Variable Overriding**: Variables can be redefined for specific elements, as seen in the `.highlight` class where the primary color is overridden.
+
+#### Benefits of CSS Variables:
+- **Consistency**: Ensures consistent styling across the entire website.
+- **Maintainability**: Changing a variable value updates all references to it, reducing the need for repetitive edits.

@@ -1,0 +1,74 @@
+### Task 3: CSS Selectors
+
+**Understanding CSS Selectors**
+
+CSS selectors are fundamental patterns used to identify and style specific elements within an HTML document. They determine how elements are displayed by targeting them based on various attributes such as type, class, ID, and more.
+
+### Sample HTML Document Featuring Different Selectors
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demonstration</title>
+    <style>
+        /* Element selector */
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        /* Class selector */
+        .class-selector {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ID selector */
+        #id-selector {
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Attribute selector */
+        a[target="_blank"] {
+            color: orange;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Element selector -->
+    <h1>Element Selector Example</h1>
+
+    <!-- Class selector -->
+    <p class="class-selector">This text is styled using a class selector.</p>
+
+    <!-- ID selector -->
+    <p id="id-selector">This text is styled using an ID selector.</p>
+
+    <!-- Attribute selector -->
+    <a href="https://example.com" target="_blank">Open Example in a New Tab</a>
+
+    <!-- Pseudo-class selector -->
+    <a href="#">Hover over this link to see the effect</a>
+
+</body>
+</html>
+```
+
+### Breakdown of Selectors:
+- **Element Selector (`h1`)**: Targets all `<h1>` elements.
+- **Class Selector (`.class-selector`)**: Targets elements with the class "class-selector".
+- **ID Selector (`#id-selector`)**: Targets the element with the unique ID "id-selector".
+- **Attribute Selector (`a[target="_blank"]`)**: Targets `<a>` elements with a `target="_blank"` attribute.
+- **Pseudo-class Selector (`a:hover`)**: Targets links when hovered over.
+
+---

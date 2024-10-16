@@ -1,0 +1,45 @@
+## Task 3: Sass Basics
+
+### Answer:
+
+Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that adds features like variables, nesting, mixins, and more to CSS, making it easier to write clean, maintainable, and scalable stylesheets.
+
+### Differences from Regular CSS:
+
+- **Variables:** Sass allows you to define variables to store values such as colors, font sizes, and URLs. This makes it easy to reuse values throughout your stylesheets and update them in one place.
+
+- **Nesting:** Sass lets you nest CSS selectors within each other, reflecting the HTML structure. This makes your stylesheets more organized and readable.
+
+- **Partials & Imports:** Sass allows you to break down your stylesheets into smaller, reusable files called partials. You can then import these partials into your main stylesheet.
+
+### Example:
+
+**Sass File (styles.scss):**
+
+
+// Import a partial file containing variables
+@import 'variables';
+
+nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+}
+
+
+**Compiled CSS Output:**
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}

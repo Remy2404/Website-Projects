@@ -1,0 +1,28 @@
+## Task 2: Compilation
+
+### Answer:
+**CSS compilation** is the process of transforming preprocessed CSS (like Sass or LESS) into standard CSS that browsers understand. This process involves parsing the preprocessor syntax, applying any functions or mixins, and outputting valid CSS.
+
+### Steps to Compile Sass:
+1. Write Sass code in a `.scss` or `.sass` file.
+2. Use a command-line tool or build tool (like Gulp or Webpack) to compile it.
+3. The output is a `.css` file that can be linked in HTML.
+
+### Example:
+**Sass Code:**
+```scss
+$font-stack: Helvetica, sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+```
+
+**Compiled CSS Output:**
+```css
+body {
+    font-family: Helvetica, sans-serif;
+}
+```
+
+---

@@ -1,0 +1,82 @@
+## Inline, Internal, and External CSS
+
+**Inline CSS:**
+
+* **Definition:** CSS rules are directly applied to individual HTML elements using the `style` attribute.
+* **Example:** `<p style="color: red; font-size: 20px;">This is a paragraph with inline CSS.</p>`
+* **Advantages:**
+    - Quick and easy to apply styles to specific elements.
+    - Good for one-off style changes.
+* **Disadvantages:**
+    - Poor maintainability: Styles are scattered throughout the HTML code.
+    - Difficult to reuse styles across multiple elements.
+    - Can make the HTML code less readable.
+
+**Internal CSS:**
+
+* **Definition:** CSS rules are placed within the `<head>` section of an HTML document, enclosed in a `<style>` tag.
+* **Example:**
+    ```html
+    <head>
+        <style>
+            p {
+                color: blue;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    ```
+* **Advantages:**
+    - Better organization and maintainability compared to inline CSS.
+    - Styles can be reused across multiple elements within the same document.
+* **Disadvantages:**
+    - Styles are specific to the individual HTML document and cannot be reused across multiple pages.
+    - Can make the HTML code larger and less readable.
+
+**External CSS:**
+
+* **Definition:** CSS rules are placed in a separate `.css` file and linked to the HTML document using the `<link>` tag.
+* **Example:**
+    ```html
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    ```
+    **styles.css:**
+    ```css
+    p {
+        color: green;
+        font-size: 14px;
+    }
+    ```
+* **Advantages:**
+    - Excellent separation of concerns between content and presentation.
+    - Reusable styles across multiple HTML documents.
+    - Improved maintainability and readability of both HTML and CSS.
+    - Faster page loading times, as CSS files can be cached by the browser.
+* **Disadvantages:**
+    - Requires additional setup to link the CSS file.
+    - May introduce slight delays in initial page loading if the CSS file is large or slow to load.
+
+**HTML Page Demonstrating All Three Methods:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Methods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSS Methods</h1>
+
+    <p style="color: red; font-size: 20px;">This paragraph has inline CSS.</p>
+
+    <p>This paragraph has internal CSS.</p>
+
+    <p>This paragraph has external CSS.</p>
+</body>
+</html>
+```
+
+This HTML page demonstrates the three different methods of applying CSS: inline, internal, and external. Each paragraph has a different style applied using a corresponding method.

@@ -1,0 +1,34 @@
+### Task 5: Style on HTML
+
+**Using Inline Styles**:
+Inline styles are applied directly to HTML elements using the `style` attribute.
+
+### Example HTML Document with Inline Styles
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Styles Example</title>
+</head>
+<body>
+
+    <!-- Inline styles -->
+    <h1 style="color: blue; text-align: center;">This is a heading with inline styles</h1>
+    <p style="font-size: 18px; color: green;">This is a paragraph with inline styles.</p>
+
+</body>
+</html>
+```
+
+**Pros**:
+- Quick and easy for small changes.
+- Overrides other styles like external or internal CSS.
+
+**Cons**:
+- Not reusable.
+- Hard to maintain in larger projects.
+
+---

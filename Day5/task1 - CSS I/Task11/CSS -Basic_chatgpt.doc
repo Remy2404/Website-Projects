@@ -1,0 +1,95 @@
+### Task 11: Table and `<div>`
+
+#### Tables and `<div>` Elements for Layout in CSS
+
+**Tables**: Historically, tables were used for webpage layouts, but this practice is now considered outdated. Tables should be used to present tabular data, such as lists of information, rather than for layout purposes.
+
+**Div Elements**: `<div>` is a block-level element that doesn't have any predefined layout behavior. Using `<div>` along with CSS (like Flexbox or Grid) is the modern and preferred way to create page layouts. It's more flexible and allows for responsive design, which adapts layouts for different screen sizes.
+
+#### When to Use Tables vs. `<div>`:
+- **Tables**: Use when displaying structured data in rows and columns (e.g., financial reports, schedules).
+- **Divs**: Use when you need to control the layout of a webpage (e.g., headers, footers, content areas).
+
+#### Example HTML Document Using Both Tables and `<div>`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Divs for Layout</title>
+    <style>
+        /* Styling the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Styling the div layout */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .box {
+            background-color: #ddd;
+            padding: 20px;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Tables and Divs for Layout</h1>
+
+    <!-- Table for presenting data -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Div layout for presenting content -->
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+</html>
+```
+
+### Summary:
+- **Tables**: Best for structured, tabular data.
+- **Divs**: Best for modern layouts using CSS Flexbox or Grid, providing more flexibility and responsiveness.
+
+---

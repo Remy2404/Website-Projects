@@ -1,0 +1,369 @@
+## Task 1: CSS Processor
+
+### Answer:
+
+A CSS processor is a tool that helps developers write cleaner and more efficient CSS code. It allows you to use features that are not available in regular CSS, such as variables, functions, and mixins. This makes your CSS code easier to read, maintain, and scale.
+
+Here are some popular CSS processors:
+
+- **Sass:** Syntactically Awesome Style Sheets (Sass) is a powerful CSS extension language that adds features like variables, nesting, and mixins to CSS.
+
+- **LESS:** Leaner Style Sheets (LESS) is another popular CSS preprocessor that offers similar features to Sass, such as variables, mixins, and functions.
+
+- **Stylus:** Stylus is a more expressive CSS preprocessor that emphasizes concise syntax and powerful features.
+
+### Advantages of using a CSS processor:
+
+- **Improved Code Organization:** CSS processors allow you to organize your stylesheets more effectively using variables, nesting, and mixins. This makes your code easier to read and maintain.
+
+- **Increased Efficiency:** Features like variables and mixins reduce code duplication, making your stylesheets more efficient and easier to update.
+
+- **Enhanced Functionality:** CSS processors provide advanced features like functions, mathematical operations, and color manipulation, which are not available in regular CSS.
+
+### Example (Sass):
+
+
+// Define a variable for the primary color
+$primary-color: #3498db;
+
+// Use the variable to style a button
+.button {
+    background-color: $primary-color;
+
+    // Use a Sass function to darken the color on hover
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+}
+
+
+## Task 2: Compilation
+
+### Answer:
+
+CSS compilation is the process of converting preprocessed CSS code (written in languages like Sass, LESS, or Stylus) into regular CSS code that web browsers can understand. This process involves parsing the preprocessor syntax, evaluating variables and functions, and generating valid CSS output.
+
+### Steps to Compile Sass:
+
+1. **Install a Sass Compiler:** You'll need to install a Sass compiler on your system. Popular options include `node-sass` (based on LibSass) and `dart-sass` (the primary implementation of Sass).
+
+2. **Write Sass Code:** Create a file with the extension `.scss` or `.sass` and write your Sass code in it.
+
+3. **Compile to CSS:** Use the command-line interface of your chosen Sass compiler to compile your Sass file into a CSS file. For example, using `node-sass`:
+
+   
+     node-sass input.scss output.css
+   
+
+### Example:
+
+**Sass Code (input.scss):**
+
+
+$font-stack: Helvetica, sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+
+
+**Compiled CSS Output (output.css):**
+
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+
+## Task 3: Sass Basics
+
+### Answer:
+
+Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that adds features like variables, nesting, mixins, and more to CSS, making it easier to write clean, maintainable, and scalable stylesheets.
+
+### Differences from Regular CSS:
+
+- **Variables:** Sass allows you to define variables to store values such as colors, font sizes, and URLs. This makes it easy to reuse values throughout your stylesheets and update them in one place.
+
+- **Nesting:** Sass lets you nest CSS selectors within each other, reflecting the HTML structure. This makes your stylesheets more organized and readable.
+
+- **Partials & Imports:** Sass allows you to break down your stylesheets into smaller, reusable files called partials. You can then import these partials into your main stylesheet.
+
+### Example:
+
+**Sass File (styles.scss):**
+
+
+// Import a partial file containing variables
+@import 'variables';
+
+nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+}
+
+
+**Compiled CSS Output:**
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+## Task 4: Variables, Functions, and Inheritance
+
+### Answer:
+
+**Variables:**
+
+In Sass, variables are defined using the `$` symbol followed by the variable name. They can store values like colors, font sizes, or any other CSS value.
+
+**Functions:**
+
+Sass provides built-in functions for manipulating values, such as colors, strings, and numbers. You can also define your own custom functions.
+
+### Example of Variables and Functions:
+
+
+// Define a variable for the base font size
+$base-font-size: 16px;
+
+// Define a mixin that takes a font size as an argument
+@mixin text-style($size) {
+    font-size: $size;
+}
+
+h1 {
+    // Use the mixin with a calculated font size
+    @include text-style(2 * $base-font-size);
+}
+
+
+**Inheritance:**
+
+Sass allows you to inherit styles from one selector to another using the `@extend` directive. This helps reduce code duplication and maintain consistency.
+
+### Example:
+
+
+.error {
+    color: red;
+}
+
+.alert {
+    // Inherit styles from the .error class
+    @extend .error;
+    font-weight: bold;
+}
+
+
+## Task 5: Bootstrap Framework
+
+### Answer:
+
+Bootstrap is a popular front-end framework that provides pre-built CSS classes and JavaScript components for building responsive websites quickly and easily. It follows a mobile-first approach, meaning it's designed for optimal viewing on mobile devices first and then scales up to larger screens.
+
+### Key Features of Bootstrap:
+
+- **Grid System:** Bootstrap's grid system allows you to create flexible and responsive layouts using rows and columns.
+
+- **Pre-styled Components:** Bootstrap provides a wide range of pre-styled components, such as buttons, forms, navigation bars, modals, and more.
+
+- **JavaScript Plugins:** Bootstrap includes JavaScript plugins for features like carousels, modals, tooltips, and popovers.
+
+### Example Layout Using Bootstrap:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bootstrap Example</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Brand</a>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">Column 1</div>
+        <div class="col-md-4">Column 2</div>
+        <div class="col-md-4">Column 3</div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary">Primary Button</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+## Task 6: Components
+
+### Answer:
+
+In CSS, components are reusable blocks of code that encapsulate the styles for specific UI elements, such as buttons, cards, or navigation menus. They promote code reusability, maintainability, and consistency in web development.
+
+### Example Card Component Using Sass:
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .card-header {
+      background-color: #f7f7f7;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .card-body {
+      padding: 10px;
+
+      .btn {
+        background-color: blue;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: darkblue;
+        }
+      }
+    }
+}
+
+
+### Compiled CSS Output:
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .card-body {
+    padding: 10px;
+}
+
+.card .card-body .btn {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.card .card-body .btn:hover {
+    background-color: darkblue;
+}
+
+
+## Task 7: Grid System and Breakpoints
+
+### Answer:
+
+A CSS grid system is a layout method that allows developers to create complex, responsive web page layouts by dividing the page into rows and columns. It provides a structured way to arrange content, making it easier to design and maintain web layouts.
+
+### Bootstrap Grid System:
+
+Bootstrap's grid system is based on a 12-column layout and uses a series of classes to define the width of columns at different screen sizes. It utilizes breakpoints to adjust the layout based on the screen size of the device.
+
+### Example Responsive Layout Using Bootstrap:
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">Column 1</div>
+      <div class="col-md-4">Column 2</div>
+      <div class="col-md-4">Column 3</div>
+    </div>
+</div>
+
+
+In this example:
+
+- `container` is a wrapper class that centers the content and applies padding.
+
+- `row` represents a row in the grid.
+
+- `col-md-4` defines a column that spans 4 out of 12 columns on medium-sized screens and larger.
+
+### Breakpoints:
+
+Bootstrap uses breakpoints to determine when to apply different styles based on the screen size. The default breakpoints are:
+
+- **xs:** Extra small devices (phones, less than 768px)
+
+- **sm:** Small devices (tablets, 768px and up)
+
+- **md:** Medium devices (desktops, 992px and up)
+
+- **lg:** Large devices (larger desktops, 1200px and up)
+
+- **xl:** Extra large devices (extra large desktops, 1400px and up)
+
+## Task 8: Theme
+
+### Answer:
+
+Theming in CSS refers to creating different visual styles or appearances for a website or application. It allows developers to provide users with options to customize the look and feel of the interface according to their preferences.
+
+### Example Theme Switcher Using Sass:
+
+
+// Define variables for light and dark theme colors
+$light-theme-background-color: #ffffff;
+$dark-theme-background-color: #333333;
+
+// Styles for the light theme
+body.light-theme {
+    background-color: $light-theme-background-color;
+    color: black;
+}
+
+// Styles for the dark theme
+body.dark-theme {
+    background-color: $dark-theme-background-color;
+    color: white;
+}
+
+
+### JavaScript for Theme Switching:
+
+You can use JavaScript to toggle between themes by adding or removing classes from the body element:
+
+
+const toggleTheme = () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+};
+
+
+This JavaScript code defines a function `toggleTheme` that toggles the `dark-theme` and `light-theme` classes on the body element. You can trigger this function using a button or any other UI element to allow users to switch between themes.

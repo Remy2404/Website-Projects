@@ -1,0 +1,294 @@
+## Task 1: CSS Processor
+
+### Answer:
+A **CSS processor** is a tool that extends the capabilities of CSS by allowing developers to use features like variables, nested rules, and functions. Popular CSS preprocessors include **Sass**, **LESS**, and **Stylus**.
+
+**Advantages of using a CSS processor:**
+- **Maintainability**: Easier to manage styles with variables and nesting.
+- **Reusability**: Code can be reused across different stylesheets.
+- **Enhanced Features**: Supports functions and mixins that simplify complex styles.
+
+### Example:
+```scss
+$primary-color: #3498db;
+
+.button {
+    background-color: $primary-color;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+```
+
+---
+
+## Task 2: Compilation
+
+### Answer:
+**CSS compilation** is the process of transforming preprocessed CSS (like Sass or LESS) into standard CSS that browsers understand. This process involves parsing the preprocessor syntax, applying any functions or mixins, and outputting valid CSS.
+
+### Steps to Compile Sass:
+1. Write Sass code in a `.scss` or `.sass` file.
+2. Use a command-line tool or build tool (like Gulp or Webpack) to compile it.
+3. The output is a `.css` file that can be linked in HTML.
+
+### Example:
+**Sass Code:**
+```scss
+$font-stack: Helvetica, sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+```
+
+**Compiled CSS Output:**
+```css
+body {
+    font-family: Helvetica, sans-serif;
+}
+```
+
+---
+
+## Task 3: Sass Basics
+
+### Answer:
+**Sass (Syntactically Awesome Style Sheets)** is a preprocessor scripting language that is interpreted or compiled into CSS. It offers features like variables, nested rules, mixins, and more.
+
+### Differences from Regular CSS:
+- **Nesting**: Allows nesting of selectors for better organization.
+- **Partials & Imports**: Enables breaking styles into smaller files for modularity.
+
+### Example:
+**Sass File (`styles.scss`):**
+```scss
+@import 'variables';
+
+nav {
+    ul {
+        list-style-type: none;
+        
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}
+```
+
+**Compiled CSS Output:**
+```css
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+```
+Notable differences include structured nesting which makes it easier to read and maintain.
+
+---
+
+## Task 4: Variables, Functions, and Inheritance
+
+### Answer:
+In Sass, **variables** are defined using the `$` symbol and can store values like colors or font sizes. **Functions** allow you to perform operations on values.
+
+### Example of Variables and Functions:
+```scss
+$base-font-size: 16px;
+
+@mixin text-style($size) {
+    font-size: $size;
+}
+
+h1 {
+    @include text-style(2 * $base-font-size);
+}
+```
+
+### Inheritance in Sass:
+Inheritance allows one selector to inherit styles from another using `@extend`.
+
+### Example:
+```scss
+.error {
+    color: red;
+}
+
+.alert {
+    @extend .error;
+    font-weight: bold;
+}
+```
+The `.alert` class will inherit all styles from `.error`.
+
+---
+
+## Task 5: Bootstrap Framework
+
+### Answer:
+The **Bootstrap framework** is a popular front-end framework for developing responsive websites quickly. It provides pre-designed components like buttons, forms, navigation bars, etc., along with a grid system for layout.
+
+### Example Layout Using Bootstrap:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Brand</a>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">Column 1</div>
+        <div class="col-md-4">Column 2</div>
+        <div class="col-md-4">Column 3</div>
+    </div>
+</div>
+
+<button class="btn btn-primary">Primary Button</button>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+```
+**Classes Explanation**:
+- `navbar`: Styles for navigation bars.
+- `container`: Centers content with appropriate padding.
+- `row` & `col-md-*`: Implements Bootstrap's grid system for responsive layouts.
+- `btn`: Styles buttons with predefined designs.
+
+---
+
+## Task 6: Components
+
+### Answer:
+Components in CSS are reusable blocks of code that encapsulate styles for specific UI elements (like buttons or cards). They enhance reusability by allowing developers to maintain consistent styling across different parts of an application.
+
+### Example Card Component Using Sass:
+```scss
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    .card-header {
+        background-color: #f7f7f7;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 10px;
+
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darkblue;
+            }
+        }
+    }
+}
+```
+
+### Compiled CSS Output:
+```css
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .card-body {
+    padding: 10px;
+}
+
+.card .card-body .btn {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.card .card-body .btn:hover {
+    background-color: darkblue;
+}
+```
+Components allow for organized styles that enhance maintainability.
+
+---
+
+## Task 7: Grid System and Breakpoints
+
+### Answer:
+The **CSS grid system** is a layout method that allows developers to create complex responsive layouts easily by dividing space into rows and columns.
+
+### Implementation Using Bootstrap:
+Bootstrap’s grid system uses a series of containers, rows, and columns to layout content.
+
+### Example Responsive Layout Using Bootstrap:
+```html
+<div class="container">
+   <div class="row">
+       <div class="col-md-4">Column 1</div>
+       <div class="col-md-4">Column 2</div>
+       <div class="col-md-4">Column 3</div>
+   </div>
+</div>
+```
+In this example, the layout adapts based on screen size due to Bootstrap's responsive classes (`col-md-*`).
+
+---
+
+## Task 8: Theme
+
+### Answer:
+Theming in CSS allows developers to create different visual styles for an application based on user preferences or design requirements. Using Sass makes it easier to manage themes through variables.
+
+### Example Theme Switcher Using Sass:
+```scss
+$light-theme-background-color: #ffffff;
+$dark-theme-background-color: #333333;
+
+body.light-theme {
+   background-color: $light-theme-background-color; 
+   color: black; 
+}
+
+body.dark-theme { 
+   background-color:$dark-theme-background-color; 
+   color:white; 
+}
+```
+
+Using JavaScript, you can toggle between themes by adding or removing classes from the body element:
+
+```javascript
+const toggleTheme = () => {
+   document.body.classList.toggle('dark-theme');
+   document.body.classList.toggle('light-theme');
+};
+```

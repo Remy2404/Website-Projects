@@ -1,0 +1,57 @@
+
+**CSS (Cascading Style Sheets):**
+
+CSS is a programming language used to style HTML elements on web pages. It controls the appearance of content, including colors, fonts, layouts, and spacing. By separating the content from the presentation, CSS makes web development more efficient, maintainable, and accessible.
+
+**Role of CSS in Web Development:**
+
+- **Enhanced Appearance:** CSS allows you to create visually appealing web pages by customizing their appearance.
+- **Improved User Experience:** Well-designed CSS can enhance user experience by making content more readable, navigable, and visually pleasing.
+- **Cross-Browser Compatibility:** CSS helps ensure that web pages are displayed consistently across different browsers and devices.
+- **Maintainability:** By separating content from presentation, CSS makes it easier to update and maintain web pages.
+- **Accessibility:** CSS can be used to make web pages more accessible to users with disabilities by providing alternative text for images, adjusting font sizes, and using appropriate color contrasts.
+
+**Simple HTML Document and CSS Stylesheet:**
+
+**HTML Document (index.html):**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p>This is a paragraph of text.</p>
+</body>
+</html>
+```
+
+**CSS Stylesheet (style.css):**
+
+```css
+body {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-size: 18px;
+}
+```
+
+**Explanation of CSS Code:**
+
+- **`body`:** This selector targets the `<body>` element of the HTML document, which represents the main content area of the page.
+- **`background-color: #f0f0f0;`:** This property sets the background color of the `<body>` element to a light gray (#f0f0f0).
+- **`color: #333333;`:** This property sets the text color of the `<body>` element to a dark gray (#333333).
+- **`font-size: 18px;`:** This property sets the font size of the text within the `<body>` element to 18 pixels.
+
+**Effect on HTML Elements:**
+
+When you open the `index.html` file in a web browser, you will see the following:
+
+- The background color of the page will be light gray.
+- The text color will be dark gray.
+- The font size of the text will be 18 pixels.
+
+This demonstrates how CSS can be used to style HTML elements and create a visually appealing web page.

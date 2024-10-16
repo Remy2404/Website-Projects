@@ -1,0 +1,29 @@
+### Task 13: Utilizing Variables in CSS
+
+#### Understanding CSS Variables (Custom Properties)
+
+CSS variables, also known as **custom properties**, enable developers to store values that can be reused throughout their stylesheets. This promotes consistency and simplifies style updates across an entire website.
+
+#### Defining and Using CSS Variables:
+Variables are defined with a `--` prefix followed by a value, while the `var()` function references these variables.
+
+#### Example of CSS Variables in Action
+
+```html
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>CSS Variables Demonstration </title><style>:root{--primary-color:#3498db;--secondary-color:#2ecc71;--font-size=16px;}  
+body{font-size=var(--font-size);color=var(--primary-color);}  
+h1{color=var(--secondary-color);}  
+
+.highlight{--primary-color=#e74c3c;color=var(--primary-color);}  
+ </style></head><body><h1>Implementing CSS Variables<h1/><p>This paragraph utilizes the primary color variable.<p/><p class='highlight'>This paragraph modifies the primary color variable.<p/><body/>
+
+```
+
+#### Explanation:
+- **`:root`** represents the document's root element (typically `<html>`). Variables defined here are accessible globally.
+- The `var()` function retrieves custom properties defined in ` :root` or other elements.
+- Variable overriding allows specific elements to redefine values, as shown in `.highlight`.
+
+#### Benefits of CSS Variables:
+- **Consistency:** Ensures uniform styling across an entire website.
+- **Maintainability:** Changing a variable's value updates all references simultaneously, minimizing repetitive edits.

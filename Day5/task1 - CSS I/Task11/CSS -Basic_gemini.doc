@@ -1,0 +1,100 @@
+### Task 11: Tables vs. `<div>` for Layouts in CSS
+
+#### Using Tables and `<div>` Elements for Layouts
+
+**Tables** were historically used for page layouts but are now considered outdated for this purpose. They should only be used for presenting tabular data.
+
+**Div Elements**, on the other hand, are block-level elements without predefined layout behavior. Combining `<div>` with modern CSS techniques (like Flexbox or Grid) is now the standard approach for creating responsive page layouts.
+
+#### When to Use Tables vs. `<div>`:
+- **Tables** should be used for structured data (e.g., financial reports).
+- **Divs** are best for controlling webpage layouts (e.g., headers, footers).
+
+#### Sample HTML Document Using Both Tables and `<div>`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables vs Divs Layout Example</title>
+    <style>
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align:left;
+        }
+
+        th {
+            background-color:#f4f4f4;
+        }
+
+        /* Div layout styling */
+        .container {
+            display:flex;
+            justify-content:center; 
+            margin-top:.5em; 
+          }
+        
+          .box { 
+          background-color:#ddd; 
+          padding:.5em; 
+          width:.25em; 
+          }
+        
+      </style> 
+ </head> 
+<body>
+
+<h1>Utilizing Tables and Divs for Layouts</h1>
+
+<!-- Table for presenting data -->
+<table> 
+<thead> 
+<tr> 
+<th>Name<th/> 
+<th>Age<th/> 
+<th>City<th/> 
+<tr/> 
+<thead/> 
+
+<tbody> 
+<tr> 
+<td>John Doe<td/> 
+<td>30<td/> 
+<td>New York<td/> 
+<tr/> 
+
+<tr> 
+<td>Jane Smith<td/> 
+<td>25<td/> 
+<td>Los Angeles<td/> 
+<tr/> 
+
+<tbody/> 
+
+<table/>
+
+<!-- Div layout for presenting content -->
+<div class='container'> 
+<div class='box'>Box 1<div/>
+<div class='box'>Box 2<div/>
+<div class='box'>Box 3<div/>
+<div/>
+
+<body/>
+
+```
+
+### Summary:
+- **Tables:** Best suited for structured data presentation.
+- **Divs:** Ideal for modern layouts using Flexbox or Grid, offering greater flexibility and responsiveness.
+
+---

@@ -1,0 +1,523 @@
+### Task 3: CSS Selectors
+
+**Understanding CSS Selectors**
+
+CSS selectors are fundamental patterns used to identify and style specific elements within an HTML document. They determine how elements are displayed by targeting them based on various attributes such as type, class, ID, and more.
+
+### Sample HTML Document Featuring Different Selectors
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demonstration</title>
+    <style>
+        /* Element selector */
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        /* Class selector */
+        .class-selector {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ID selector */
+        #id-selector {
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Attribute selector */
+        a[target="_blank"] {
+            color: orange;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Element selector -->
+    <h1>Element Selector Example</h1>
+
+    <!-- Class selector -->
+    <p class="class-selector">This text is styled using a class selector.</p>
+
+    <!-- ID selector -->
+    <p id="id-selector">This text is styled using an ID selector.</p>
+
+    <!-- Attribute selector -->
+    <a href="https://example.com" target="_blank">Open Example in a New Tab</a>
+
+    <!-- Pseudo-class selector -->
+    <a href="#">Hover over this link to see the effect</a>
+
+</body>
+</html>
+```
+
+### Breakdown of Selectors:
+- **Element Selector (`h1`)**: Targets all `<h1>` elements.
+- **Class Selector (`.class-selector`)**: Targets elements with the class "class-selector".
+- **ID Selector (`#id-selector`)**: Targets the element with the unique ID "id-selector".
+- **Attribute Selector (`a[target="_blank"]`)**: Targets `<a>` elements with a `target="_blank"` attribute.
+- **Pseudo-class Selector (`a:hover`)**: Targets links when hovered over.
+
+---
+
+### Task 4: Debugging CSS
+
+**Common CSS Challenges**
+1. **Overlapping Styles**: Multiple CSS rules may apply to the same element, leading to conflicts.
+2. **Incorrect Specificity**: A less specific selector may be overridden by a more specific one.
+3. **Missing Semicolons**: Omitting semicolons can disrupt entire style rules.
+
+### Debugging Steps Using Browser Developer Tools
+
+1. **Access Developer Tools**:
+   - Right-click on an element in the browser and select "Inspect".
+   
+2. **Examine Element**:
+   - Navigate to the "Elements" tab to view the HTML structure and associated styles.
+   
+3. **Review Applied Styles**:
+   - The "Styles" pane displays which CSS rules are active. Strikethrough rules indicate they are overridden.
+
+4. **Experiment with Live CSS Changes**:
+   - Edit CSS directly in the "Styles" pane for immediate feedback on potential fixes.
+
+### Example Issue and Debugging Process:
+**Problem**: A paragraph is meant to be centered but isn't appearing as such.
+- **Step 1**: Use developer tools to inspect the paragraph.
+- **Step 2**: Check if a `text-align` rule is applied; if absent, add it in the live editor to test.
+- **Step 3**: Once confirmed, update the CSS file accordingly.
+
+---
+
+### Task 5: Inline Styling in HTML
+
+**Understanding Inline Styles**
+Inline styles are applied directly within HTML elements using the `style` attribute.
+
+### Sample HTML Document Demonstrating Inline Styles
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Styles Demonstration</title>
+</head>
+<body>
+
+    <!-- Inline styles -->
+    <h1 style="color: blue; text-align: center;">This heading uses inline styles</h1>
+    <p style="font-size: 18px; color: green;">This paragraph uses inline styles.</p>
+
+</body>
+</html>
+```
+
+**Advantages**:
+- Quick application for minor adjustments.
+- Overrides external or internal CSS styles.
+
+**Disadvantages**:
+- Not reusable across multiple elements.
+- Difficult to manage in larger projects.
+
+---
+
+### Task 6: Text and Font Styling
+
+**Styling Text with CSS**
+
+### Sample HTML Document Showcasing Text Styling
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Font Styling Example</title>
+    <style>
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: normal;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This is a Styled Heading</h1>
+    <p>This paragraph features styled fonts and alignment, utilizing the 'Times New Roman' font.</p>
+    <a href="#">This link has styled text</a>
+
+</body>
+</html>
+```
+
+---
+
+### Task 7: Utilizing Online Fonts and Favicon
+
+**Online Fonts Overview**
+Online fonts, like those from Google Fonts, enable the use of custom typography on your website.
+
+### Example Using Google Fonts
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fonts Demonstration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <p>This text employs the 'Roboto' font sourced from Google Fonts.</p>
+
+</body>
+</html>
+```
+
+**Favicon Explanation**
+A favicon is a small icon that appears in the browser tab.
+
+### Favicon HTML Code Example
+
+```html
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+```
+
+---
+
+### Task 8: Color and Background Application
+
+**Applying Colors and Backgrounds in CSS**
+
+### Sample HTML Document Illustrating Color and Background Usage
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Background Application Example</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .solid-color {
+            background-color: #ff0000;
+        }
+
+        .gradient {
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        .image-bg {
+            background-image: url('background.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="solid-color">Solid Color Background Example</div>
+    <div class="gradient">Gradient Background Example</div>
+    <div class="image-bg">Image Background Example</div>
+
+</body>
+</html>
+```
+
+---
+
+### Task 9: Alignment and Display Properties in CSS
+
+### Sample HTML Document Demonstrating Alignment and Display Properties
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment and Display Properties Example</title>
+    <style>
+        .block {
+            display: block;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block">Block Element Example</div>
+    <span class="inline">Inline Element Example</span>
+    <div class="inline-block">Inline-Block Element Example</div>
+
+    <div class="flex-container">
+        <div>Flex Item 1</div>
+        <div>Flex Item 2</div>
+        <div>Flex Item 3</div>
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+### Task 10: Understanding the Box Model
+
+**CSS Box Model Overview**
+
+### Sample HTML Document Illustrating the Box Model Concept
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Demonstration</title>
+    <style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">Box Model Example Displayed Here</div>
+
+</body>
+</html>
+```
+
+---
+
+### Task 11: Tables vs. `<div>` for Layouts in CSS
+
+#### Using Tables and `<div>` Elements for Layouts
+
+**Tables** were historically used for page layouts but are now considered outdated for this purpose. They should only be used for presenting tabular data.
+
+**Div Elements**, on the other hand, are block-level elements without predefined layout behavior. Combining `<div>` with modern CSS techniques (like Flexbox or Grid) is now the standard approach for creating responsive page layouts.
+
+#### When to Use Tables vs. `<div>`:
+- **Tables** should be used for structured data (e.g., financial reports).
+- **Divs** are best for controlling webpage layouts (e.g., headers, footers).
+
+#### Sample HTML Document Using Both Tables and `<div>`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables vs Divs Layout Example</title>
+    <style>
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align:left;
+        }
+
+        th {
+            background-color:#f4f4f4;
+        }
+
+        /* Div layout styling */
+        .container {
+            display:flex;
+            justify-content:center; 
+            margin-top:.5em; 
+          }
+        
+          .box { 
+          background-color:#ddd; 
+          padding:.5em; 
+          width:.25em; 
+          }
+        
+      </style> 
+ </head> 
+<body>
+
+<h1>Utilizing Tables and Divs for Layouts</h1>
+
+<!-- Table for presenting data -->
+<table> 
+<thead> 
+<tr> 
+<th>Name<th/> 
+<th>Age<th/> 
+<th>City<th/> 
+<tr/> 
+<thead/> 
+
+<tbody> 
+<tr> 
+<td>John Doe<td/> 
+<td>30<td/> 
+<td>New York<td/> 
+<tr/> 
+
+<tr> 
+<td>Jane Smith<td/> 
+<td>25<td/> 
+<td>Los Angeles<td/> 
+<tr/> 
+
+<tbody/> 
+
+<table/>
+
+<!-- Div layout for presenting content -->
+<div class='container'> 
+<div class='box'>Box 1<div/>
+<div class='box'>Box 2<div/>
+<div class='box'>Box 3<div/>
+<div/>
+
+<body/>
+
+```
+
+### Summary:
+- **Tables:** Best suited for structured data presentation.
+- **Divs:** Ideal for modern layouts using Flexbox or Grid, offering greater flexibility and responsiveness.
+
+---
+
+### Task 12: Exploring Flexbox
+
+#### Flexbox Layout Model Explained
+
+The **Flexbox layout model** simplifies creating layouts that adapt automatically to varying screen sizes and content lengths, allowing items to grow, shrink, and align within their container.
+
+Key Flexbox properties include:
+- `display:flex;`: Establishes a flex container enabling Flexbox layout for its child elements.
+- `flex-direction`: Specifies the arrangement direction of flex items (row or column).
+- `justify-content`: Aligns items horizontally within the flex container.
+- `align-items`: Aligns items vertically within the flex container.
+
+#### Responsive Flexbox Layout Example
+
+```html
+<!DOCTYPE html> 
+<html lang='en'> 
+<head><meta charset='UTF-8'>  
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>  
+<title>Flexbox Layout Example </title><style>.flex-container{display:flex;flex-direction=row;justify-content=space-between;align-items=center;background-color=#f4f4f4;padding=20px;}  
+.flex-item{background-color=#ddd;padding=20px;width=30%;text-align=center;}  
+@media(max-width=600px){  
+.flex-container{flex-direction=column;justify-content=center;align-items=stretch;}  
+}  
+ </style></head><body><div class='flex-container'>  
+<div class='flex-item'>Item 1<div/>  
+<div class='flex-item'>Item 2<div/>  
+<div class='flex-item'>Item 3<div/>  
+<div/><body/>
+
+```
+
+#### Explanation of Flexbox Properties:
+- **`flex-direction=row`** arranges flex items horizontally.
+- **`justify-content=space-between`** evenly spaces flex items along the horizontal axis.
+- **`align-items=center`** centers flex items vertically within their container.
+- The media query adjusts layout to a vertical column on smaller screens.
+
+Flexbox provides a more streamlined approach compared to older float-based layouts.
+
+---
+
+### Task 13: Utilizing Variables in CSS
+
+#### Understanding CSS Variables (Custom Properties)
+
+CSS variables, also known as **custom properties**, enable developers to store values that can be reused throughout their stylesheets. This promotes consistency and simplifies style updates across an entire website.
+
+#### Defining and Using CSS Variables:
+Variables are defined with a `--` prefix followed by a value, while the `var()` function references these variables.
+
+#### Example of CSS Variables in Action
+
+```html
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>CSS Variables Demonstration </title><style>:root{--primary-color:#3498db;--secondary-color:#2ecc71;--font-size=16px;}  
+body{font-size=var(--font-size);color=var(--primary-color);}  
+h1{color=var(--secondary-color);}  
+
+.highlight{--primary-color=#e74c3c;color=var(--primary-color);}  
+ </style></head><body><h1>Implementing CSS Variables<h1/><p>This paragraph utilizes the primary color variable.<p/><p class='highlight'>This paragraph modifies the primary color variable.<p/><body/>
+
+```
+
+#### Explanation:
+- **`:root`** represents the document's root element (typically `<html>`). Variables defined here are accessible globally.
+- The `var()` function retrieves custom properties defined in ` :root` or other elements.
+- Variable overriding allows specific elements to redefine values, as shown in `.highlight`.
+
+#### Benefits of CSS Variables:
+- **Consistency:** Ensures uniform styling across an entire website.
+- **Maintainability:** Changing a variable's value updates all references simultaneously, minimizing repetitive edits.

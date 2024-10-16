@@ -1,0 +1,73 @@
+CSS Basics
+
+Task 1: CSS Basics
+
+Prompt:
+
+"Define CSS and explain its role in web development. Create a simple HTML document and include a basic CSS stylesheet that changes the background color, text color, and font size of the page. Explain each part of the CSS code and its effect on the HTML elements."
+
+Solution:
+
+Defining CSS:
+
+CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML or XML. It allows you to control the layout, colors, fonts, and other visual aspects of a web page.
+
+Role of CSS in Web Development:
+
+CSS plays a crucial role in web development by enabling developers to create visually appealing and user-friendly websites. It allows for the separation of content (HTML) from presentation (CSS), making it easier to maintain and update the design of a website.
+
+Creating a Simple HTML Document:
+
+To create a simple HTML document, you can use any text editor like Notepad or Visual Studio Code. Here's an example of a basic HTML structure:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+    <style>
+        /* CSS goes here */
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Simple Website</h1>
+    <p>This is a simple HTML document with CSS.</p>
+</body>
+</html>
+
+Including a Basic CSS Stylesheet:
+
+To include a basic CSS stylesheet in your HTML document, you can add the CSS code within the <style> tags in the <head> section. Here's an example of how to change the background color, text color, and font size of the page:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background color */
+            color: #333333; /* Dark gray text color */
+            font-size: 18px; /* Font size of 18 pixels */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Simple Website</h1>
+    <p>This is a simple HTML document with CSS.</p>
+</body>
+</html>
+
+Explanation of CSS Code:
+
+In the CSS code above, we are targeting the <body> element using the body selector. Within the curly braces {}, we define the properties we want to change:
+
+- background-color: #f0f0f0; sets the background color to light gray (#f0f0f0).
+- color: #333333; sets the text color to dark gray (#333333).
+- font-size: 18px; sets the font size to 18 pixels.
+
+By applying these styles to the <body> element, we change the appearance of the entire web page.
+
+Effect on HTML Elements:
+
+The CSS code we added will affect all the HTML elements within the <body> tag. In this example, the background color, text color, and font size of the page will be changed. Specifically, the <h1> heading and <p> paragraph elements will inherit these styles.
+
+I hope this helps! Let me know if you have any further questions.

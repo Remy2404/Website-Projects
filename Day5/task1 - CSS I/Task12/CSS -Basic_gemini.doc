@@ -1,0 +1,41 @@
+### Task 12: Exploring Flexbox
+
+#### Flexbox Layout Model Explained
+
+The **Flexbox layout model** simplifies creating layouts that adapt automatically to varying screen sizes and content lengths, allowing items to grow, shrink, and align within their container.
+
+Key Flexbox properties include:
+- `display:flex;`: Establishes a flex container enabling Flexbox layout for its child elements.
+- `flex-direction`: Specifies the arrangement direction of flex items (row or column).
+- `justify-content`: Aligns items horizontally within the flex container.
+- `align-items`: Aligns items vertically within the flex container.
+
+#### Responsive Flexbox Layout Example
+
+```html
+<!DOCTYPE html> 
+<html lang='en'> 
+<head><meta charset='UTF-8'>  
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>  
+<title>Flexbox Layout Example </title><style>.flex-container{display:flex;flex-direction=row;justify-content=space-between;align-items=center;background-color=#f4f4f4;padding=20px;}  
+.flex-item{background-color=#ddd;padding=20px;width=30%;text-align=center;}  
+@media(max-width=600px){  
+.flex-container{flex-direction=column;justify-content=center;align-items=stretch;}  
+}  
+ </style></head><body><div class='flex-container'>  
+<div class='flex-item'>Item 1<div/>  
+<div class='flex-item'>Item 2<div/>  
+<div class='flex-item'>Item 3<div/>  
+<div/><body/>
+
+```
+
+#### Explanation of Flexbox Properties:
+- **`flex-direction=row`** arranges flex items horizontally.
+- **`justify-content=space-between`** evenly spaces flex items along the horizontal axis.
+- **`align-items=center`** centers flex items vertically within their container.
+- The media query adjusts layout to a vertical column on smaller screens.
+
+Flexbox provides a more streamlined approach compared to older float-based layouts.
+
+---

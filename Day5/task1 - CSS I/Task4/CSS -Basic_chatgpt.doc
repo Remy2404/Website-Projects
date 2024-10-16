@@ -1,0 +1,28 @@
+### Task 4: How to Debug CSS
+
+**Common CSS Issues:**
+1. **Overlapping Styles**: Multiple CSS rules apply to the same element, causing conflicts.
+2. **Incorrect Specificity**: The wrong selector takes precedence due to improper specificity.
+3. **Missing Semicolons**: Omitting semicolons in CSS can break the entire rule set.
+
+### Steps for Debugging with Browser Developer Tools
+
+1. **Open Developer Tools**:
+   - Right-click on the element in the browser and select "Inspect".
+   
+2. **Inspect Element**:
+   - Select the "Elements" tab to view the HTML structure and corresponding styles.
+   
+3. **View Applied Styles**:
+   - In the "Styles" pane, you can see which CSS rules are applied. Crossed-out rules indicate they are overridden by more specific or higher-priority rules.
+
+4. **Live Test CSS Changes**:
+   - You can edit CSS directly in the "Styles" pane to test changes live. This helps quickly identify and resolve issues.
+
+### Example Issue and Debugging:
+**Issue**: A paragraph is supposed to be centered, but it isn’t.
+- **Step 1**: Inspect the paragraph using the developer tools.
+- **Step 2**: Check if a `text-align` rule is applied. If not, add it in the live editor to see if it resolves the issue.
+- **Step 3**: Once confirmed, update the CSS file with the fix.
+
+---

@@ -1,0 +1,47 @@
+### Task 9: Alignment and Display Properties in CSS
+
+### Sample HTML Document Demonstrating Alignment and Display Properties
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment and Display Properties Example</title>
+    <style>
+        .block {
+            display: block;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block">Block Element Example</div>
+    <span class="inline">Inline Element Example</span>
+    <div class="inline-block">Inline-Block Element Example</div>
+
+    <div class="flex-container">
+        <div>Flex Item 1</div>
+        <div>Flex Item 2</div>
+        <div>Flex Item 3</div>
+    </div>
+
+</body>
+</html>
+```
+
+---

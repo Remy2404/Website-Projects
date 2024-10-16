@@ -1,0 +1,43 @@
+## Task 7: Grid System and Breakpoints
+
+### Answer:
+
+A CSS grid system is a layout method that allows developers to create complex, responsive web page layouts by dividing the page into rows and columns. It provides a structured way to arrange content, making it easier to design and maintain web layouts.
+
+### Bootstrap Grid System:
+
+Bootstrap's grid system is based on a 12-column layout and uses a series of classes to define the width of columns at different screen sizes. It utilizes breakpoints to adjust the layout based on the screen size of the device.
+
+### Example Responsive Layout Using Bootstrap:
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">Column 1</div>
+      <div class="col-md-4">Column 2</div>
+      <div class="col-md-4">Column 3</div>
+    </div>
+</div>
+
+
+In this example:
+
+- `container` is a wrapper class that centers the content and applies padding.
+
+- `row` represents a row in the grid.
+
+- `col-md-4` defines a column that spans 4 out of 12 columns on medium-sized screens and larger.
+
+### Breakpoints:
+
+Bootstrap uses breakpoints to determine when to apply different styles based on the screen size. The default breakpoints are:
+
+- **xs:** Extra small devices (phones, less than 768px)
+
+- **sm:** Small devices (tablets, 768px and up)
+
+- **md:** Medium devices (desktops, 992px and up)
+
+- **lg:** Large devices (larger desktops, 1200px and up)
+
+- **xl:** Extra large devices (extra large desktops, 1400px and up)

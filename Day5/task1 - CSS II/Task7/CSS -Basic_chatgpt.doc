@@ -1,0 +1,21 @@
+## Task 7: Grid System and Breakpoints
+
+### Answer:
+The **CSS grid system** is a layout method that allows developers to create complex responsive layouts easily by dividing space into rows and columns.
+
+### Implementation Using Bootstrap:
+Bootstrap’s grid system uses a series of containers, rows, and columns to layout content.
+
+### Example Responsive Layout Using Bootstrap:
+```html
+<div class="container">
+   <div class="row">
+       <div class="col-md-4">Column 1</div>
+       <div class="col-md-4">Column 2</div>
+       <div class="col-md-4">Column 3</div>
+   </div>
+</div>
+```
+In this example, the layout adapts based on screen size due to Bootstrap's responsive classes (`col-md-*`).
+
+---

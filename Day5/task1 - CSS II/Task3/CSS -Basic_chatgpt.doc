@@ -1,0 +1,40 @@
+## Task 3: Sass Basics
+
+### Answer:
+**Sass (Syntactically Awesome Style Sheets)** is a preprocessor scripting language that is interpreted or compiled into CSS. It offers features like variables, nested rules, mixins, and more.
+
+### Differences from Regular CSS:
+- **Nesting**: Allows nesting of selectors for better organization.
+- **Partials & Imports**: Enables breaking styles into smaller files for modularity.
+
+### Example:
+**Sass File (`styles.scss`):**
+```scss
+@import 'variables';
+
+nav {
+    ul {
+        list-style-type: none;
+        
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}
+```
+
+**Compiled CSS Output:**
+```css
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+```
+Notable differences include structured nesting which makes it easier to read and maintain.
+
+---

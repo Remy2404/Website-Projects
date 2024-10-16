@@ -1,0 +1,43 @@
+### Task 8: Color and Background
+
+**Applying Colors and Backgrounds in CSS**
+
+### Example HTML Document with Color and Background
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Background Example</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .solid-color {
+            background-color: #ff0000;
+        }
+
+        .gradient {
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        .image-bg {
+            background-image: url('background.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="solid-color">Solid Color Background</div>
+    <div class="gradient">Gradient Background</div>
+    <div class="image-bg">Image Background</div>
+
+</body>
+</html>
+```
+
+---
