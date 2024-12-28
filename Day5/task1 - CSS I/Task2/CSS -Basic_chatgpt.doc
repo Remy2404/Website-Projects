@@ -1,3 +1,7 @@
+/**
+ * This section provides an overview of the three different ways to apply CSS to HTML documents: inline, internal, and external.
+ * It discusses the advantages and disadvantages of each method, and provides examples of how to use them.
+ */
 ### Differences Between Inline, Internal, and External CSS
 
 CSS (Cascading Style Sheets) can be applied to HTML documents in three ways: inline, internal, and external. Each method has its own use cases, advantages, and disadvantages.
