@@ -7,10 +7,10 @@ This is a simple web application demonstrating the use of jQuery to dynamically 
 
 ## Setup
 1. Clone the repository:
-   \\\ash
-   git clone https://github.com/your-username/my-jquery-project.git
-   \\\
-2. Open \index.html\ in your browser.
+
+git clone https://github.com/Remy2404/Website-Projects.git
+
+2. Open index.html in your browser.
 
 ## Dependencies
 - jQuery (included via CDN or locally).
