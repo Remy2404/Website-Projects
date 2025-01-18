@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch and Process Data</title>
+    <style>
+        /* CSS for modern and responsive design */
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #444;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="output">
+        <h1>Phon Ramy</h1>
+    </div>
+
+    <script>
+        // JavaScript code with your name
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                // Replace 'Sok Dara' with your full name
+                setTimeout(() => resolve('Data fetched! Student Name: Phon Ramy'), 1000);
+            });
+        }
+
+        async function fetchAndProcessData() {
+            try {
+                // Replace 'Sok Dara' with your full name
+                const outputDiv = document.getElementById('output');
+                outputDiv.innerHTML += '<p>Using async/await:</p>';
+                const data = await fetchData();
+                outputDiv.innerHTML += `<p>${data}</p>`;
+                const processed = 'Processing data...';
+                outputDiv.innerHTML += `<p>${processed}</p>`;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Run the function when the window loads
+        window.onload = fetchAndProcessData;
+    </script>
+</body>
+</html>
